@@ -23,11 +23,11 @@ function App() {
       <header className="App-header">
         <img src={logo} className="logo" alt="logo" />
         <h1>Hello World!</h1>
-        <p>🚀 XI PPLG 2</p>
+        <p>🚀 create by glory</p>
       </header>
       <footer>
-        Created by <strong>gloisji</strong> with <span>❤</span>
-      </footer>
+  © {new Date().getFullYear()} gloryaering. All rights reserved.
+</footer>
     </div>
   );
 }
