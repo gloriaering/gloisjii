@@ -64,3 +64,23 @@ footer span {
     opacity: 1;
   }
 }
+.btn-glow {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #ff0080, #7928ca);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.7),
+              0 0 40px rgba(121, 40, 202, 0.7);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-glow:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 0, 128, 1),
+              0 0 60px rgba(121, 40, 202, 1);
+}

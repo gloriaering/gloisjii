@@ -1,0 +1,108 @@
+.article-container {
+    min-height: 100vh;
+    background: radial-gradient(ellipse at center, #1a0033 0%, #000010 100%);
+    color: white;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.8;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Judul Glow */
+  .article-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #e0b3ff;
+    text-shadow: 0 0 15px #b266ff, 0 0 30px #ff00ff;
+    animation: glowPulse 3s infinite ease-in-out;
+    text-align: center;
+  }
+  @keyframes glowPulse {
+    0%, 100% { text-shadow: 0 0 15px #b266ff, 0 0 30px #ff00ff; }
+    50% { text-shadow: 0 0 25px #ff66ff, 0 0 40px #ff00ff; }
+  }
+  
+  /* Scroll horizontal */
+  .article-scroll {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+  }
+  .article-scroll::-webkit-scrollbar {
+    height: 10px;
+  }
+  .article-scroll::-webkit-scrollbar-thumb {
+    background: #7928ca;
+    border-radius: 5px;
+  }
+  
+  /* Card artikel */
+  .article-card {
+    flex: 0 0 70%;
+    min-width: 60%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(185, 0, 255, 0.4);
+    color: #ddd;
+    scroll-snap-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .article-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(255, 0, 200, 0.8);
+    z-index: 2;
+  }
+  .article-card h2 {
+    color: #ff99ff;
+    text-shadow: 0 0 8px #ff00ff;
+    margin-bottom: 1rem;
+  }
+  .article-card p, 
+  .article-card ul {
+    font-size: 1.1rem;
+  }
+  .article-card li {
+    margin-bottom: 8px;
+  }
+  
+  /* Tombol glow */
+  .btn-glow {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #ff0080, #7928ca);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(255, 0, 128, 0.7),
+                0 0 40px rgba(121, 40, 202, 0.7);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-glow:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(255, 0, 128, 1),
+                0 0 60px rgba(121, 40, 202, 1);
+  }
+  
+  /* Bintang */
+  .star {
+    position: absolute;
+    background: white;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 1; }
+  }
+  
